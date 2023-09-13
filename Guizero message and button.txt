@@ -1,0 +1,12 @@
+from guizero import App, Text, PushButton
+
+def change_message():
+    message.value = "You pressed the button!"
+
+
+
+app = App(title="Hello World")
+message = Text(app, text="Welcome to the Hello Worls App!")
+button = PushButton(app, text="Press Me", command=change_message)
+
+app.display()

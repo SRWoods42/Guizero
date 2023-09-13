@@ -1,0 +1,17 @@
+from guizero import App, Text, PushButton, TextBox, Box
+
+app = App(title="ROT13", width=800, height=600)
+
+title = Text(app, text="Convert to/from ROT 13", size=24, height=2)
+plaintext_title = Text(app, text="Plaintext:")
+plaintext_text = TextBox(app, width=90, height=10, multiline=True)
+buttons_box = Box(app, height=80, width=220)
+
+encrypt_button = PushButton(buttons_box, text="Encrypt", align="left")
+decrypt_button = PushButton(buttons_box, text="Decrypt", align="left")
+clear_button = PushButton(buttons_box, text="Clear", align="left")
+
+ciphertext_title = Text(app, text="CipherText:")
+ciphertext_text = TextBox(app, width=90, height=10, multiline=True)
+
+app.display()
